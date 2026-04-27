@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
-:root{
+:root {
      --cor-fundo: white;
      --cor-tabela: red;
      --cor-terciaria: #333333;
      --cor-hover: #22c55e;
 
      --fonte-primaria: 'Krona One', sans-serif;
-     --fonte-secundaria: 'Montserrat', sans-serif;
 }
 
 
@@ -20,28 +19,37 @@
 
 body {
     background: var(--cor-fundo);
-    color: #fff;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+}
+
 .container {
     background: var(--cor-tabela);
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 20px;
     width: 450px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
-h1 {
+
+.titulo {
     text-align: center;
     margin-bottom: 20px;
     font-size: 20px;
 }
 
-form {
+.form-recarga {
     display: flex;
     flex-direction: column;
 }
@@ -53,8 +61,8 @@ label {
 }
 
 input, select {
-    padding: 8px;
-    border-radius: 6px;
+    padding: 9px;
+    border-radius: 9px;
     border: none;
     outline: none;
     background: var(--cor-terciaria);
@@ -71,10 +79,6 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-}
-
-button:hover {
-    background: var(--cor-hover);
 }
 
 .resultado {
