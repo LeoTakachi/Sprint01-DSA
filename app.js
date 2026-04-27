@@ -22,24 +22,42 @@ form.addEventListener("submit", function(e) {
     // Energia
     let energia = (potencia * tempo) / 60;
 
-    // Tarifa
-    let valor = 1.0;
+    // Tarifa base
+    let tarifa = 1.0;
 
-    if (tipoUsuario === "Premium") {
-        valor = 0.8;
+    // Adicional de pico
+    let adicional = 0;
+    if (horario === "Pico (Taxa de 30%)") {
+    adicional = 0.3;
     }
 
-    if (horario === "Pico") {
-        valor += 0.3;
+    // Desconto
+    let desconto = 0;
+    if (tipoUsuario === "Premium (20% de Desconto)") {
+    desconto = 0.2;
     }
 
-    let valorTotal = energia * valor;
+    // Valor base
+    let valorBase = energia * tarifa;
 
-    // Pegando os <p> de resultado
-    let resultados = document.querySelectorAll(".resultado p");
+    // Valor adicional (pico)
+    let valorTarifa = energia * adicional;
 
-    resultados[0].innerHTML = `<strong>Energia Consumida:</strong> ${energia.toFixed(2)} kWh`;
-    resultados[1].innerHTML = `<strong>Tempo Total:</strong> ${tempo} min`;
-    resultados[2].innerHTML = `<strong>Valor Total:</strong> R$ ${valorTotal.toFixed(2)}`;
+    // Soma tudo
+    let valorComTarifa = valorBase + valorTarifa;
 
+    // Desconto
+    let valorDesconto = valorComTarifa * desconto;
+
+    // Valor final
+    let valorTotal = valorComTarifa - valorDesconto;
+    
+
+   let resultados = document.querySelectorAll(".resultado p");
+
+resultados[0].innerHTML = `<strong>Energia Consumida:</strong> ${energia.toFixed(2)} kWh`;
+resultados[1].innerHTML = `<strong>Tempo Total:</strong> ${tempo} min`;
+resultados[2].innerHTML = `<strong>Tarifa Extra:</strong> R$ ${valorTarifa.toFixed(2)}`;
+resultados[3].innerHTML = `<strong>Valor Total:</strong> R$ ${valorTotal.toFixed(2)}`;
+resultados[4].innerHTML = `<strong>Desconto:</strong> R$ ${valorDesconto.toFixed(2)}`;
 });
