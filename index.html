@@ -2,32 +2,34 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Simulador de Recarga</title>
+    <title>GoodWe</title>
+    <link rel="icon" type="image/png" href="./assets/icone.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <img class="logo" alt="Logo GoodWe" src="./assets/logo_goodwe.png">
 
 <div class="container">
-    <h1>🔋 Simulador de Sessão de Recarga</h1>
+    <h1 class="titulo">🔋 Sessão de Recarga</h1>
 
-    <form id="formRecarga">
+    <form class="form-recarga" id="formRecarga">
 
-        <label>Tipo de Usuário:</label>
+        <label class="form-label">Tipo de Usuário:</label>
         <select>
             <option>Comum</option>
-            <option>Premium</option>
+            <option>Premium (20% de Desconto)</option>
         </select>
 
         <label>Tempo de Recarga (minutos):</label>
-        <input type="number" placeholder="Ex: 60">
+        <input type="number" placeholder="Ex: 60" required>
 
         <label>Potência do Carregador (kW):</label>
-        <input type="number" placeholder="Ex: 7">
+        <input type="number" placeholder="Ex: 7" required>
 
         <label>Horário:</label>
         <select>
             <option>Normal</option>
-            <option>Pico</option>
+            <option>Pico (Taxa de 30%)</option>
         </select>
 
         <button type="submit">Iniciar Sessão</button>
@@ -38,9 +40,9 @@
         <h2>Resultado da Sessão</h2>
         <p><strong>Energia Consumida:</strong> -- kWh</p>
         <p><strong>Tempo Total:</strong> -- min</p>
+        <p><strong>Tarifa:</strong> R$ --</p>
         <p><strong>Valor Total:</strong> R$ --</p>
     </div>
-
 </div>
     <script src="app.js"></script>
 </body>
