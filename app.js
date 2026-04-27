@@ -23,14 +23,14 @@ form.addEventListener("submit", function(e) {
     let energia = (potencia * tempo) / 60;
 
     // Tarifa
-    let valor = 1.2;
+    let valor = 1.0;
 
     if (tipoUsuario === "Premium") {
-        valor = 0.9;
+        valor = 0.8;
     }
 
     if (horario === "Pico") {
-        valor += 0.5;
+        valor += 0.3;
     }
 
     let valorTotal = energia * valor;
