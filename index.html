@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador de Recarga</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🔋 Simulador de Sessão de Recarga</h1>
+
+    <form id="formRecarga">
+
+        <label>Tipo de Usuário:</label>
+        <select>
+            <option>Comum</option>
+            <option>Premium</option>
+        </select>
+
+        <label>Tempo de Recarga (minutos):</label>
+        <input type="number" placeholder="Ex: 60">
+
+        <label>Potência do Carregador (kW):</label>
+        <input type="number" placeholder="Ex: 7">
+
+        <label>Horário:</label>
+        <select>
+            <option>Normal</option>
+            <option>Pico</option>
+        </select>
+
+        <button type="submit">Iniciar Sessão</button>
+
+    </form>
+
+    <div class="resultado">
+        <h2>Resultado da Sessão</h2>
+        <p><strong>Energia Consumida:</strong> -- kWh</p>
+        <p><strong>Tempo Total:</strong> -- min</p>
+        <p><strong>Valor Total:</strong> R$ --</p>
+    </div>
+
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
