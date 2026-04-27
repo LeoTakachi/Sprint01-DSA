@@ -27,7 +27,7 @@ form.addEventListener("submit", function(e) {
 
     // Adicional de pico
     let adicional = 0;
-    if (horario === "Pico (Taxa de 30%)") {
+    if (horario === "Pico (Acréscimo de 30%)") {
     adicional = 0.3;
     }
 
