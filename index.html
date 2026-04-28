@@ -8,42 +8,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header class="cabecalho">
+        <img src="./assets/logo_goodwe.png" class="logo-header" alt="Logo GoodWe">
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+        </nav>
+    </header>
+
+<div class="main">
     <img class="logo" alt="Logo GoodWe" src="./assets/logo_goodwe.png">
+  
+    <div class="container">
+        <h1 class="titulo">🔋 Sessão de Recarga</h1>
 
-<div class="container">
-    <h1 class="titulo">🔋 Sessão de Recarga</h1>
+        <form class="form-recarga" id="formRecarga">
 
-    <form class="form-recarga" id="formRecarga">
+            <label class="form-label">Tipo de Usuário:</label>
+            <select>
+                <option>Comum</option>
+                <option>Premium (20% de Desconto)</option>
+            </select>
 
-        <label class="form-label">Tipo de Usuário:</label>
-        <select>
-            <option>Comum</option>
-            <option>Premium (20% de Desconto)</option>
-        </select>
+            <label>Tempo de Recarga (minutos):</label>
+            <input type="number" placeholder="Ex: 60" required>
 
-        <label>Tempo de Recarga (minutos):</label>
-        <input type="number" placeholder="Ex: 60" required>
+            <label>Potência do Carregador (kW):</label>
+            <input type="number" placeholder="Ex: 7" required>
 
-        <label>Potência do Carregador (kW):</label>
-        <input type="number" placeholder="Ex: 7" required>
+            <label>Horário:</label>
+            <select>
+                <option>Normal</option>
+                <option>Pico (Acréscimo de 30%)</option>
+            </select>
 
-        <label>Horário:</label>
-        <select>
-            <option>Normal</option>
-            <option>Pico (Acréscimo de 30%)</option>
-        </select>
+            <button type="submit">Iniciar Sessão</button>
 
-        <button type="submit">Iniciar Sessão</button>
+        </form>
 
-    </form>
-
-    <div class="resultado">
-        <h2>Resultado da Sessão</h2>
-        <p><strong>Energia Consumida:</strong> -- kWh</p>
-        <p><strong>Tempo Total:</strong> -- min</p>
-        <p><strong>Tarifa:</strong> R$ --</p>
-        <p><strong>Valor Total:</strong> R$ --</p>
-        <p><strong>Desconto:</strong> R$ --</p>
+        <div class="resultado">
+            <h2>Resultado da Sessão</h2>
+            <p><strong>Energia Consumida:</strong> -- kWh</p>
+            <p><strong>Tempo Total:</strong> -- min</p>
+            <p><strong>Tarifa:</strong> R$ --</p>
+            <p><strong>Valor Total:</strong> R$ --</p>
+            <p><strong>Desconto:</strong> R$ --</p>
+        <div>
     </div>
 </div>
     <script src="app.js"></script>
