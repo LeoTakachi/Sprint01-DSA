@@ -1,6 +1,10 @@
+// Selecionando elemento do HTML pelo id. 
 let form = document.getElementById("formRecarga");
 
+// Adicionando evento ao formulário. 
 form.addEventListener("submit", function(e) {
+
+    // Cancelando e controlando o comportamento padrão do formulário. 
     e.preventDefault();
 
     // Pegando os inputs e selects
@@ -14,7 +18,7 @@ form.addEventListener("submit", function(e) {
     let potencia = Number(inputs[1].value);
 
     // Validação
-    if (tempo <= 0 || potencia <= 0) {
+    while (tempo <= 0 || potencia <= 0) {
         alert("Preencha os valores corretamente!");
         return;
     }
