@@ -24,7 +24,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: 1fr auto 1fr; 
-    padding: 15px 40px;
+    padding: 10px 40px;
     background-color: black;
 }
 
